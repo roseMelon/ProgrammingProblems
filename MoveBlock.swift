@@ -94,24 +94,3 @@ func checkPointAvailable(_ p: (Int,Int)) -> Bool {
 func checkRecordExist(_ state: State) -> Bool {
     return record.reduce(false) { $0 || $1.contains(state) }
 }
-
-/*
-// Available move at point (x, y), (a, b)
- 
- (x+1,y) (x+1,y)
- (x-1,y) (x-1,y)
- (x,y+1) (x,y+1)
- (x,y-1) (x,y-1)
-
- rotate when horizontal state
- (x,y) (a-1,b-1) right (-1,0)
- (x,y) (a+1,b-1) right (+1,0)
- (x+1,y+1) (a,b) left (+1,0)
- (x-1,y+1) (a,b) left (-1,0)
-
- rotate when vertical state
- (x,y) (a-1,b-1) right (0,-1)
- (x,y) (a-1,b+1) right (0,+1)
- (x+1,y+1) (a,b) left (0,+1)
- (x+1,y-1) (a,b) left (0,-1)
-*/
